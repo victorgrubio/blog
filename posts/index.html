@@ -22,9 +22,15 @@ background: '/assets/img/bg-index.jpg'
     </a>
     <p class="post-meta">Posted by
         {% if post.author %}
-        {{ post.author }}
+        <a href="{{site.author.url}}">{{site.author.name}}</a> 
+        {% if site.author.twitter %} 
+        <a href="https://x.com/{{site.author.twitter}}">(@{{site.author.twitter}})</a>
+        {% endif %}
         {% else %}
-        {{ site.author }}
+        <a href="{{site.author.url}}">{{site.author.name}}</a> 
+        {% if site.author.twitter %} 
+        <a href="https://x.com/{{site.author.twitter}}">(@{{site.author.twitter}})</a>
+        {% endif %}
         {% endif %}
         on {{ post.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=post.content %}
     </p>

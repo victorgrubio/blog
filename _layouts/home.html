@@ -42,11 +42,17 @@ layout: default
             {% endif %}
           </a>
           <p class="post-meta">Posted by
-            {% if post.author %}
-            {{ post.author }}
-            {% else %}
-            {{ site.author }}
-            {% endif %}
+        {% if post.author %}
+        <a href="{{site.author.url}}">{{site.author.name}}</a> 
+        {% if site.author.twitter %} 
+        <a href="https://x.com/{{site.author.twitter}}">(@{{site.author.twitter}})</a>
+        {% endif %}
+        {% else %}
+        <a href="{{site.author.url}}">{{site.author.name}}</a> 
+        {% if site.author.twitter %} 
+        <a href="https://x.com/{{site.author.twitter}}">(@{{site.author.twitter}})</a>
+        {% endif %}
+        {% endif %}
             on
             {{ post.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=post.content %}            
           </p>
