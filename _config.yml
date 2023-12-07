@@ -20,17 +20,26 @@
 
 title: Victor Garcia  DevOps, Cloud & More
 email: info@devsmentor.com
-author: Victor Garcia
+author:
+  name: Victor Garcia
+  url: https://victorgarciar.com/about
+  twitter: VictorGarciaDev
 description: >- # this means to ignore newlines until "baseurl:"
   Learn how to be an expert in building powerful APIs, mastering DevOps practices, and automating Cloud deployments with our mentorships.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://victorgarciar.com" # the base hostname & protocol for your site, e.g. http://example.com
 # Social Profiles
 twitter_username: VictorGarciaDev
+twitter:
+  username: VictorGarciaDev
+  card: summary
 github_username: victorgrubio
 linkedin_username: victor-garcia-rubio
 # Add your google-analytics ID here to activate google analytics
 google_analytics: UA-XXXXXXXXX-X # out your google-analytics cod
+webmaster_verifications:
+  google: 1234
+  bing: 1234
 future: true
 markdown: kramdown
 paginate: 10
@@ -46,7 +55,16 @@ plugins:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-sitemap ## Uncomment this line to silently generate a sitemaps.org compliant sitemap for your Jekyll site
-
+  - jekyll-seo-tag
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/img/bg-index.jpg
+  - scope:
+      path: ""
+    values:
+      seo_description_max_words: 200
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
