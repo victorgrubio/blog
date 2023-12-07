@@ -18,13 +18,11 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Victor Garcia - Devs Mentor
+title: Victor Garcia  DevOps, Cloud & More
 email: info@devsmentor.com
 author: Victor Garcia
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Learn how to be an expert in building powerful APIs, mastering DevOps practices, and automating Cloud deployments with our mentorships.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://victorgarciar.com" # the base hostname & protocol for your site, e.g. http://example.com
 # Social Profiles
@@ -32,11 +30,15 @@ twitter_username: VictorGarciaDev
 github_username: victorgrubio
 linkedin_username: victor-garcia-rubio
 # Add your google-analytics ID here to activate google analytics
-google_analytics:   UA-XXXXXXXXX-X # out your google-analytics cod
-# Build settings
-markdown:           kramdown
-paginate:           10
-paginate_path:      "/posts/page:num/"
+google_analytics: UA-XXXXXXXXX-X # out your google-analytics cod
+future: true
+markdown: kramdown
+paginate: 10
+paginate_path: "/posts/page:num/"
+collections:
+  posts:
+    output: true
+    permalink: /:collection/:title
 
 # Build settings
 theme: jekyll-theme-clean-blog
@@ -44,6 +46,7 @@ plugins:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-sitemap ## Uncomment this line to silently generate a sitemaps.org compliant sitemap for your Jekyll site
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
